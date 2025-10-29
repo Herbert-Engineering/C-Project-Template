@@ -1,0 +1,6 @@
+build/
+!build/.gitkeep
+output/
+!output/.gitkeep
+external/
+!external/.gitkeep

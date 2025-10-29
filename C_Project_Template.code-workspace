@@ -1,0 +1,78 @@
+{
+	// Define the folders of the project explorer view
+	"folders": [
+		{
+			"name": "C Project Template",
+			"path": "."
+		},
+		{
+			// Add further folder
+			"path": "."
+		}
+	],
+	// Workspace Settings
+	"settings": {
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/Thumbs.db": true
+		},
+		"peacock.color": "#dd0531",
+		// Code Spell Checker Settings
+		"cSpell.words": [
+			"Anson",
+			"cheshirekow",
+			"cpptools",
+			"cprj",
+			"datawrangler",
+			"devel",
+			"errorlens",
+			"extensionpack",
+			"formulahendry",
+			"Gruntfuggly",
+			"johnpapa",
+			"msys",
+			"pacman",
+			"toolsai",
+			"ucrt",
+			"usernamehw"
+		],
+		"files.associations": {
+			"*.h": "c",
+			"*.c": "c",
+			"*.cpp": "cpp",
+			"*.md": "markdown",
+			"*.in": "c"
+		}
+	},
+	"extensions": {
+    	"recommendations": [
+      		"ms-vscode.cpptools",
+			"ms-vscode.cpptools-extension-pack",
+			"ms-vscode.cpptools-themes",
+			"ms-vscode-remote.vscode-remote-extensionpack",
+			"ms-vscode-remote.remote-wsl",
+			"ms-vscode.vscode-serial-monitor",
+			"ms-vscode.hexeditor",
+			"ms-toolsai.datawrangler",
+      		"shd101wyy.markdown-preview-enhanced",
+			"DavidAnson.vscode-markdownlint",
+			"johnpapa.vscode-peacock",
+			"Gruntfuggly.todo-tree",
+			"aaron-bond.better-comments",
+			"usernamehw.errorlens",
+			"streetsidesoftware.code-spell-checker",
+			"adpyke.codesnap",
+			"ms-vscode.cmake-tools",
+			"cheshirekow.cmake-format",
+			"bbenoist.doxygen",
+			"cschlosser.doxdocgen",
+			"lauterbach.practice",
+			"llvm-vs-code-extensions.vscode-clangd",
+			"josetr.cmake-language-support-vscode"
+    	]
+	}
+}

@@ -1,0 +1,11 @@
+#ifndef VERSION_H_
+#define VERSION_H_
+
+
+// the configured options and settings for the project
+#define PROJECT_VERSION_MAJOR   @PROJECT_VERSION_MAJOR@
+#define PROJECT_VERSION_MINOR   @PROJECT_VERSION_MINOR@
+#define PROJECT_VERSION_PATCH   @PROJECT_VERSION_PATCH@
+
+
+#endif // VERSION_H_

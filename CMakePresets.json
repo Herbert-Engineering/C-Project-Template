@@ -1,0 +1,70 @@
+{
+  "version": 10,
+  "cmakeMinimumRequired": {
+    "major": 4,
+    "minor": 0,
+    "patch": 0
+  },
+
+  "configurePresets": [
+    {
+      "name": "config-due-debug",
+      "displayName": "Arduino Due (Debug)",
+      "description": "Debug build for SAM3X8E using arm-none-eabi-gcc",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/due-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/toolchains/arm-gcc-sam3x.cmake",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+
+        "DUE_VARIANT": "arduino_due_x",
+        "DUE_F_CPU": "84000000UL",
+        "DUE_DEVICE": "__SAM3X8E__",
+        "DUE_ARDUINO": "10607",
+        "DUE_SAM": "ARDUINO_SAM_DUE",
+        "DUE_ARCH": "ARDUINO_ARCH_SAM",
+
+        "DUE_USB_VID": "0x2341",
+        "DUE_USB_PID": "0x003E",
+        "DUE_USB_MANUFACTURER": "Arduino LLC",
+        "DUE_USB_PRODUCT": "Arduino Due",
+
+        "DUE_LD_SCRIPT": "${sourceDir}/external/arduino_core_sam-src/variants/arduino_due_x/linker_scripts/gcc/flash.ld",
+        "DUE_PORT": "/dev/ttyACM0"
+      }
+    },
+    {
+      "name": "config-due-release",
+      "displayName": "Arduino Due (Release)",
+      "description": "Release build for SAM3X8E using arm-none-eabi-gcc",
+      "inherits": "config-due-debug",
+      "binaryDir": "${sourceDir}/build/due-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+
+  "buildPresets": [
+    {
+      "name": "build-due-debug",
+      "configurePreset": "config-due-debug",
+      "description": "Build Arduino Due firmware (Debug)"
+    },
+    {
+      "name": "build-due-release",
+      "configurePreset": "config-due-release",
+      "description": "Build Arduino Due firmware (Release)"
+    }
+  ],
+
+  "testPresets": [
+    {
+      "name": "flash-due",
+      "configurePreset": "config-due-release",
+      "description": "Flash the built firmware to Arduino Due",
+      "inheritConfigureEnvironment": true
+    }
+  ]
+}
