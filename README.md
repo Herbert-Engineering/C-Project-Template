@@ -104,7 +104,7 @@ The development takes place in Visual Studio Code and is using WSL: Ubuntu. The 
 2. Clone Git repository into the current directory
 
     ``` bash
-    git clone https://gitlab.com/Herbert-Engineering/c-project-template.git .
+    git clone https://github.com/Herbert-Engineering/C-Project-Template.git .
     ```
 
 3. Open the workspace from file
